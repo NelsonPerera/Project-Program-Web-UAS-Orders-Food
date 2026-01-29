@@ -69,6 +69,10 @@ Visit `http://localhost:8081` in your browser.
 - **Email**: `admin@foodapp.com`
 - **Password**: `admin123`
 - **Dashboard**: `http://localhost:8081/admin/dashboard`
-
+## sample of our project screenshot
+Github link_page-0001.jpg
+Github link_page-0002.jpg
+Github link_page-0003.jpg
+Github link_page-0004.jpg
 ## License
 Distributed under the MIT License.
