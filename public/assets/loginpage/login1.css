@@ -1,0 +1,142 @@
+#offcanvas-body {
+    padding: 30px;
+}
+
+.login-div,
+.signup-div {
+    margin-bottom: 30px;
+}
+
+#login-text,
+#signup-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #282c3f;
+    margin-bottom: 10px;
+}
+
+.blank {
+    height: 10px;
+}
+
+.create,
+.already {
+    font-size: 14px;
+    color: #686b78;
+    margin-bottom: 20px;
+}
+
+#create,
+#already {
+    color: #fc8019;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#create:hover,
+#already:hover {
+    text-decoration: underline;
+}
+
+._2tuBw {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Form Styles */
+#phone-box,
+#name-box,
+#email-box,
+#password-box,
+#signup-password-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+._381fS {
+    width: 100%;
+    padding: 15px 12px 8px;
+    border: 1px solid #d4d5d9;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+._381fS:focus {
+    outline: none;
+    border-color: #fc8019;
+}
+
+._381fS:focus+div+label,
+._381fS:not([value=""])+div+label,
+._381fS.filled+div+label {
+    top: 5px;
+    font-size: 11px;
+    color: #686b78;
+}
+
+._1Cvlf {
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    font-size: 16px;
+    color: #93959f;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.login-button,
+.signup-button {
+    margin: 25px 0;
+}
+
+.a-ayg input {
+    width: 100%;
+    padding: 14px;
+    background-color: #fc8019;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.a-ayg input:hover {
+    background-color: #e07316;
+}
+
+.additional {
+    font-size: 12px;
+    color: #686b78;
+    line-height: 1.6;
+}
+
+.Terms,
+.Policy {
+    color: #282c3f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.Terms:hover,
+.Policy:hover {
+    color: #fc8019;
+}
+
+/* Toggle between login and signup */
+.signup-div,
+#signup-form {
+    display: none;
+}
+
+.login-div.hidden,
+#login-form.hidden {
+    display: none;
+}
+
+.signup-div.active,
+#signup-form.active {
+    display: block;
+}

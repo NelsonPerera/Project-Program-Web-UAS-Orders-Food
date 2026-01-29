@@ -1,0 +1,44 @@
+<?php
+// Direct restaurant insertion using mysqli
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'food_ordering_db';
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if restaurants already exist
+$result = $conn->query("SELECT COUNT(*) as count FROM restaurants");
+$row = $result->fetch_assoc();
+
+if ($row['count'] > 0) {
+    echo "Restaurants already exist ({$row['count']}). Skipping...\n";
+    exit(0);
+}
+
+// Insert restaurants
+$sql = "INSERT INTO restaurants (name, slug, description, image, cuisines, rating, delivery_time, price_for_two, address, city, is_active) VALUES
+('Ayam Geprek Bensu', 'ayam-geprek-bensu', 'The most popular Ayam Geprek in Indonesia. Spicy, crispy, and delicious.', 'https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Fast Food, Chicken', 4.5, 30, 45000.00, 'Jl. Tebet Raya No. 123, Jakarta Selatan', 'Jakarta', 1),
+('Bakso Boedjangan', 'bakso-boedjangan', 'Modern twist on traditional Indonesian meatballs. Various fillings and broth options.', 'https://images.pexels.com/photos/1907244/pexels-photo-1907244.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Meatballs, Soup', 4.6, 25, 50000.00, 'Jl. Braga No. 56, Bandung', 'Bandung', 1),
+('Sate Khas Senayan', 'sate-khas-senayan', 'Premium Indonesian satay and traditional cuisine with authentic flavors.', 'https://images.pexels.com/photos/8697347/pexels-photo-8697347.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Satay, Grill', 4.7, 40, 150000.00, 'Senayan City Mall, Jakarta Pusat', 'Jakarta', 1),
+('Nasi Goreng Kambing Kebon Sirih', 'nasgor-kambing-kebon-sirih', 'Legendary Lamb Fried Rice since 1958. A must-try Jakarta street food.', 'https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Fried Rice', 4.8, 35, 65000.00, 'Jl. Kebon Sirih, Jakarta Pusat', 'Jakarta', 1),
+('Bebek Bengil (Dirty Duck)', 'bebek-bengil', 'Famous crispy duck from Ubud, Bali. Served with sambal matah.', 'https://images.pexels.com/photos/6419717/pexels-photo-6419717.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Duck, Balinese', 4.9, 45, 180000.00, 'Ubud, Bali (Jakarta Branch)', 'Jakarta', 1),
+('Martabak San Francisco', 'martabak-san-francisco', 'The pioneer of premium Martabak. Sweet and savory pancakes.', 'https://images.pexels.com/photos/10312440/pexels-photo-10312440.jpeg?auto=compress&cs=tinysrgb&w=800', 'Dessert, Indonesian, Street Food', 4.7, 20, 75000.00, 'Jl. Burangrang, Bandung', 'Bandung', 1),
+('Soto Betawi H. Ma\\'ruf', 'soto-betawi-h-maruf', 'Authentic Jakarta beef soup with coconut milk broth.', 'https://images.pexels.com/photos/12044810/pexels-photo-12044810.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Soup', 4.6, 30, 60000.00, 'Taman Ismail Marzuki, Jakarta', 'Jakarta', 1),
+('Warung Leko', 'warung-leko', 'Specialist in Iga Penyet (Smashed Ribs). Spicy and satisfying.', 'https://images.pexels.com/photos/3997609/pexels-photo-3997609.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Ribs, Spicy', 4.5, 35, 90000.00, 'Surabaya Town Square, Surabaya', 'Surabaya', 1),
+('Rawon Setan', 'rawon-setan', 'Famous black beef soup from Surabaya. Known for its rich flavor.', 'https://images.pexels.com/photos/11075723/pexels-photo-11075723.jpeg?auto=compress&cs=tinysrgb&w=800', 'Indonesian, Soup', 4.7, 25, 55000.00, 'Jl. Embong Malang, Surabaya', 'Surabaya', 1),
+('Mie Gacoan', 'mie-gacoan', 'Viral spicy noodles with affordable prices. Favorite among students.', 'https://images.pexels.com/photos/2323391/pexels-photo-2323391.jpeg?auto=compress&cs=tinysrgb&w=800', 'Noodles, Spicy, Dimsum', 4.4, 40, 30000.00, 'Many locations', 'Jakarta', 1)";
+
+if ($conn->query($sql) === TRUE) {
+    $result = $conn->query("SELECT COUNT(*) as count FROM restaurants");
+    $row = $result->fetch_assoc();
+    echo "Successfully seeded {$row['count']} restaurants!\n";
+} else {
+    echo "Error: " . $conn->error . "\n";
+}
+
+$conn->close();
