@@ -77,10 +77,15 @@ Visit `http://localhost:8081` in your browser.
 !(screenshots/page-0001.jpg)
 
 ### Restaurant Discovery
-!(screenshot/Github link_page-0001.jpg)
-!(screenshot/Github link_page-0002.jpg)
-!(screenshot/Github link_page-0003.jpg)
-!(screenshot/Github link_page-0004.jpg)
+## Project Screenshots
+
+### Homepage
+### Restaurant Discovery
+![Restaurant Discovery 1](screenshots/Github%20link_page-0001.jpg)
+![Restaurant Discovery 2](screenshots/Github%20link_page-0002.jpg)
+![Restaurant Discovery 3](screenshots/Github%20link_page-0003.jpg)
+![Restaurant Discovery 4](screenshots/Github%20link_page-0004.jpg)
+
 
 ## License
 Distributed under the MIT License.
