@@ -1,8 +1,8 @@
-# 🍔 Food Delivery App - Jakarta Edition
+# Food Delivery App - Jakarta Edition
 
 A high-end, responsive food ordering platform built with **CodeIgniter 4**. This application features a dynamic restaurant discovery system, interactive food menus, a seamless cart experience, and a comprehensive Admin Dashboard for order management.
 
-## ✨ Features
+## Features
 
 - **Dynamic Homepage**: High-end design with animated carousels and restaurant listings.
 - **Smart Search**: Find restaurants by name or cuisine with real-time filtering.
@@ -14,14 +14,12 @@ A high-end, responsive food ordering platform built with **CodeIgniter 4**. This
     - Track and process customer orders.
 - **Authentication**: Secure Login/Registration system for both customers and admins.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: CodeIgniter 4 (PHP 8.1+)
 - **Database**: MySQL
-- **Frontend**: TailwindCSS, Bootstrap 5, FontAwesome
-- **Interactivity**: Vanilla JavaScript (Fetch API)
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 - XAMPP/WAMP or equivalent (PHP 8.1+, MySQL)
@@ -67,10 +65,10 @@ php spark serve --port 8081
 ```
 Visit `http://localhost:8081` in your browser.
 
-## 👥 Admin Credentials
+## Admin Credentials
 - **Email**: `admin@foodapp.com`
 - **Password**: `admin123`
 - **Dashboard**: `http://localhost:8081/admin/dashboard`
 
-## 📄 License
+## License
 Distributed under the MIT License.
